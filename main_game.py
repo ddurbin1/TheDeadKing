@@ -1,4 +1,15 @@
 """ This file houses the main code of the program that will primarily call from other files. """
+from playsound import playsound
+import pygame as pg
+import random
+
+pg.init()
+
+game_display = pg.display.set_mode((800,600))
+pg.display.set_caption('The Dead King')
+clock = pg.time.Clock()
+
+
 
 class character:
     def Name():
@@ -68,8 +79,17 @@ class game:
             print(inv)
         else:
             print("test")
-            
 
+running = True
+while running:
+    for event in pg.event.get():
+        if event.type == pg.QUIT:
+            running = False
+    pg.display.update()
+    clock.tick(30)
+
+pg.quit()
+    
 game.start()
 game.home()
 game.first_comflict()
