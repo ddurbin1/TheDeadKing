@@ -9,8 +9,6 @@ game_display = pg.display.set_mode((800,600))
 pg.display.set_caption('The Dead King')
 clock = pg.time.Clock()
 
-
-
 class character:
     def Name():
         global name
